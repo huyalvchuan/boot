@@ -2,7 +2,6 @@ com/wenwu/utils/NetClient.class
 com/wenwu/tables/tables/records/SCourseJoinRecord.class
 com/wenwu/tables/tables/records/SUserAccountRecord.class
 com/wenwu/tables/tables/records/SCourseHistoryRecord.class
-com/wenwu/web/TestController.class
 com/wenwu/tables/tables/records/SCourseQuestionRecord.class
 com/wenwu/tables/Keys.class
 com/wenwu/tables/tables/records/SCourseRecord.class
@@ -22,5 +21,4 @@ com/wenwu/WenwuApplication.class
 com/wenwu/utils/TokenManager.class
 com/wenwu/utils/RedisManager.class
 com/wenwu/tables/Keys$Identities0.class
-com/wenwu/web/UserController.class
 com/wenwu/tables/tables/SCourseware.class

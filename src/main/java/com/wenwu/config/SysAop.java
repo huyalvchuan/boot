@@ -29,7 +29,7 @@ public class SysAop {
     @Autowired TokenManager tokenManager;
     @Autowired ResponseData responseData;
     Logger logger = LoggerFactory.getLogger(this.getClass());
-    @Pointcut("execution(* com.wenwu.web.*Controller.*(..))")
+    @Pointcut("execution(* com.wenwu.controller.*Controller.*(..))")
     public void excudeService() {
     }
     @Around("excudeService()")
@@ -53,7 +53,6 @@ public class SysAop {
         }
         return null;
     }
-
     JSONObject myRequestWapper(HttpServletRequest request) throws IOException {
         ServletInputStream strem = request.getInputStream();
         if(strem ==null)
@@ -74,26 +73,4 @@ public class SysAop {
     }
 
 
-}
-
-class TestModel {
-    String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    int age;
 }

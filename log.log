@@ -2923,3 +2923,1087 @@ Caused by: java.lang.IllegalArgumentException: No converter found for return val
 2017-06-30 17:20:58.339  INFO 963 --- [Thread-105] application                              : Destroying Spring FrameworkServlet 'messageDispatcherServlet'
 2017-06-30 17:20:58.341  INFO 963 --- [Thread-105] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
 2017-06-30 17:20:58.344  INFO 963 --- [Thread-105] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@3bc47875{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.1217868698617708179.8080/,UNAVAILABLE}
+2017-07-02 20:08:50.487  INFO 3734 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 3734 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:08:50.503  INFO 3734 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:08:51.069  INFO 3734 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13983d9d: startup date [Sun Jul 02 20:08:51 CST 2017]; root of context hierarchy
+2017-07-02 20:08:51.512  WARN 3734 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.wenwu.WenwuApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'client' for bean class [com.wenwu.utils.NetClient] conflicts with existing, non-compatible bean definition of same name and class [com.wenwu.utils.Client]
+2017-07-02 20:08:51.517 ERROR 3734 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13983d9d: startup date [Sun Jul 02 20:08:51 CST 2017]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.wenwu.WenwuApplication.main(WenwuApplication.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+2017-07-02 20:08:51.545 ERROR 3734 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.wenwu.WenwuApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'client' for bean class [com.wenwu.utils.NetClient] conflicts with existing, non-compatible bean definition of same name and class [com.wenwu.utils.Client]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:180)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:324)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:246)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:524)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.wenwu.WenwuApplication.main(WenwuApplication.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'client' for bean class [com.wenwu.utils.NetClient] conflicts with existing, non-compatible bean definition of same name and class [com.wenwu.utils.Client]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:320)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:259)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:137)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:268)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:230)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:166)
+	... 18 common frames omitted
+
+2017-07-02 20:09:45.615  INFO 3743 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 3743 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:09:45.619  INFO 3743 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:09:46.270  INFO 3743 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fab2837: startup date [Sun Jul 02 20:09:46 CST 2017]; root of context hierarchy
+2017-07-02 20:09:48.646  INFO 3743 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:09:49.378  INFO 3743 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e67d3d9a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:09:49.467  INFO 3743 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2017-07-02 20:09:49.549  INFO 3743 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$41e5789b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:09:50.383  INFO 3743 --- [restartedMain] org.eclipse.jetty.util.log               : Logging initialized @7656ms
+2017-07-02 20:09:50.589  INFO 3743 --- [restartedMain] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:09:50.594  INFO 3743 --- [restartedMain] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:09:50.883  INFO 3743 --- [restartedMain] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:09:50.883  INFO 3743 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4617 ms
+2017-07-02 20:09:51.249  INFO 3743 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:09:51.249  INFO 3743 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:09:51.249  INFO 3743 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:09:51.250  INFO 3743 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:09:51.252  INFO 3743 --- [restartedMain] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-07-02 20:09:51.252  INFO 3743 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:09:51.252  INFO 3743 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:09:51.254  INFO 3743 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2017-07-02 20:09:51.648  INFO 3743 --- [restartedMain] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@7a1d04f{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.8509822838028525789.8080/,AVAILABLE}
+2017-07-02 20:09:51.649  INFO 3743 --- [restartedMain] org.eclipse.jetty.server.Server          : Started @8923ms
+2017-07-02 20:10:37.360  INFO 3743 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@350b1006, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c7fbf37, org.springframework.security.web.header.HeaderWriterFilter@48b74148, org.springframework.security.web.authentication.logout.LogoutFilter@57127b77, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@8510080, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27c2803, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@659cfcfb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@218fc068, org.springframework.security.web.session.SessionManagementFilter@780c3c9b, org.springframework.security.web.access.ExceptionTranslationFilter@41ec3e12, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d3016c9]
+2017-07-02 20:10:37.562  INFO 3743 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fab2837: startup date [Sun Jul 02 20:09:46 CST 2017]; root of context hierarchy
+2017-07-02 20:10:37.688  INFO 3743 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/hello]}" onto public java.lang.String com.wenwu.web.TestController.hello()
+2017-07-02 20:10:37.693  INFO 3743 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.Object com.wenwu.web.UserController.login()
+2017-07-02 20:10:37.696  INFO 3743 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-02 20:10:37.697  INFO 3743 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-02 20:10:37.765  INFO 3743 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:10:37.766  INFO 3743 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:10:37.859  INFO 3743 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:10:37.927  WARN 3743 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-07-02 20:10:38.978  INFO 3743 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-02 20:10:39.102  INFO 3743 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-02 20:10:39.129  INFO 3743 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:10:39.129  INFO 3743 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-02 20:10:39.155  INFO 3743 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2017-07-02 20:10:39.156  INFO 3743 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'messageDispatcherServlet'
+2017-07-02 20:10:39.156  INFO 3743 --- [restartedMain] o.s.w.t.http.MessageDispatcherServlet    : FrameworkServlet 'messageDispatcherServlet': initialization started
+2017-07-02 20:10:39.166  INFO 3743 --- [restartedMain] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2017-07-02 20:10:39.228  INFO 3743 --- [restartedMain] o.s.w.t.http.MessageDispatcherServlet    : FrameworkServlet 'messageDispatcherServlet': initialization completed in 72 ms
+2017-07-02 20:10:39.274  INFO 3743 --- [restartedMain] o.e.jetty.server.AbstractConnector       : Started ServerConnector@77155494{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:10:39.281  INFO 3743 --- [restartedMain] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2017-07-02 20:10:39.288  INFO 3743 --- [restartedMain] com.wenwu.WenwuApplication               : Started WenwuApplication in 55.469 seconds (JVM running for 56.561)
+2017-07-02 20:11:46.009  INFO 3743 --- [Thread-16] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fab2837: startup date [Sun Jul 02 20:09:46 CST 2017]; root of context hierarchy
+2017-07-02 20:11:46.016  INFO 3743 --- [Thread-16] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-02 20:11:46.038  INFO 3743 --- [Thread-16] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@77155494{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:11:46.040  INFO 3743 --- [Thread-16] application                              : Destroying Spring FrameworkServlet 'messageDispatcherServlet'
+2017-07-02 20:11:46.040  INFO 3743 --- [Thread-16] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:11:46.041  INFO 3743 --- [Thread-16] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@7a1d04f{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.8509822838028525789.8080/,UNAVAILABLE}
+2017-07-02 20:11:46.724  INFO 3743 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 3743 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:11:46.725  INFO 3743 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:11:46.728  INFO 3743 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2be14242: startup date [Sun Jul 02 20:11:46 CST 2017]; root of context hierarchy
+2017-07-02 20:11:48.487  INFO 3743 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:11:48.845  INFO 3743 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e67d3d9a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:11:48.850  INFO 3743 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2017-07-02 20:11:48.869  INFO 3743 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$41e5789b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:11:49.077  INFO 3743 --- [restartedMain] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:11:49.078  INFO 3743 --- [restartedMain] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:11:49.083  INFO 3743 --- [restartedMain] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:11:49.083  INFO 3743 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2355 ms
+2017-07-02 20:11:49.244  INFO 3743 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:11:49.245  INFO 3743 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:11:49.245  INFO 3743 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:11:49.245  INFO 3743 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:11:49.246  INFO 3743 --- [restartedMain] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-07-02 20:11:49.246  INFO 3743 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:11:49.246  INFO 3743 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:11:49.247  INFO 3743 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2017-07-02 20:11:49.272  INFO 3743 --- [restartedMain] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@3d510c57{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.3793767896159742116.8080/,AVAILABLE}
+2017-07-02 20:11:49.275  INFO 3743 --- [restartedMain] org.eclipse.jetty.server.Server          : Started @126544ms
+2017-07-02 20:12:24.141  INFO 3743 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20b0564d, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c28f4bb, org.springframework.security.web.header.HeaderWriterFilter@daa0bfc, org.springframework.security.web.authentication.logout.LogoutFilter@339f954b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@380d0881, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fc23947, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@126a3ea8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b273393, org.springframework.security.web.session.SessionManagementFilter@56fef543, org.springframework.security.web.access.ExceptionTranslationFilter@130609f0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13aeb72]
+2017-07-02 20:12:24.195  INFO 3743 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2be14242: startup date [Sun Jul 02 20:11:46 CST 2017]; root of context hierarchy
+2017-07-02 20:12:24.209  INFO 3743 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/hello]}" onto public java.lang.String com.wenwu.web.TestController.hello()
+2017-07-02 20:12:24.210  INFO 3743 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.Object com.wenwu.web.UserController.login()
+2017-07-02 20:12:24.211  INFO 3743 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-02 20:12:24.212  INFO 3743 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-02 20:12:24.232  INFO 3743 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:12:24.232  INFO 3743 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:12:24.260  INFO 3743 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:12:24.283  WARN 3743 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-07-02 20:12:24.558  INFO 3743 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-02 20:12:24.626  INFO 3743 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-02 20:12:24.677  INFO 3743 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:12:24.677  INFO 3743 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-02 20:12:24.686  INFO 3743 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 9 ms
+2017-07-02 20:12:24.686  INFO 3743 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'messageDispatcherServlet'
+2017-07-02 20:12:24.687  INFO 3743 --- [restartedMain] o.s.w.t.http.MessageDispatcherServlet    : FrameworkServlet 'messageDispatcherServlet': initialization started
+2017-07-02 20:12:24.687  INFO 3743 --- [restartedMain] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2017-07-02 20:12:24.696  INFO 3743 --- [restartedMain] o.s.w.t.http.MessageDispatcherServlet    : FrameworkServlet 'messageDispatcherServlet': initialization completed in 9 ms
+2017-07-02 20:12:24.698  INFO 3743 --- [restartedMain] o.e.jetty.server.AbstractConnector       : Started ServerConnector@9e6c3fa{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:12:24.698  INFO 3743 --- [restartedMain] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2017-07-02 20:12:24.702  INFO 3743 --- [restartedMain] com.wenwu.WenwuApplication               : Started WenwuApplication in 38.362 seconds (JVM running for 161.97)
+2017-07-02 20:15:49.335  INFO 3743 --- [Thread-32] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2be14242: startup date [Sun Jul 02 20:11:46 CST 2017]; root of context hierarchy
+2017-07-02 20:15:49.340  INFO 3743 --- [Thread-32] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-02 20:15:49.346  INFO 3743 --- [Thread-32] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@9e6c3fa{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:15:49.347  INFO 3743 --- [Thread-32] application                              : Destroying Spring FrameworkServlet 'messageDispatcherServlet'
+2017-07-02 20:15:49.347  INFO 3743 --- [Thread-32] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:15:49.347  INFO 3743 --- [Thread-32] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@3d510c57{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.3793767896159742116.8080/,UNAVAILABLE}
+2017-07-02 20:16:12.088  INFO 3784 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 3784 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:16:12.098  INFO 3784 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:16:13.034  INFO 3784 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fab2837: startup date [Sun Jul 02 20:16:13 CST 2017]; root of context hierarchy
+2017-07-02 20:16:16.582  INFO 3784 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:16:17.721  INFO 3784 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$eb98d617] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:16:17.795  INFO 3784 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2017-07-02 20:16:17.892  INFO 3784 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$47011118] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:16:18.951  INFO 3784 --- [restartedMain] org.eclipse.jetty.util.log               : Logging initialized @10569ms
+2017-07-02 20:16:19.189  INFO 3784 --- [restartedMain] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:16:19.192  INFO 3784 --- [restartedMain] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:16:19.470  INFO 3784 --- [restartedMain] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:16:19.471  INFO 3784 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6444 ms
+2017-07-02 20:16:19.859  INFO 3784 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:16:19.862  INFO 3784 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2017-07-02 20:16:19.866  INFO 3784 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:16:19.866  INFO 3784 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:16:19.867  INFO 3784 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:16:19.867  INFO 3784 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:16:19.867  INFO 3784 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:16:20.206  INFO 3784 --- [restartedMain] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@182a8afb{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.5178316818981498246.8080/,AVAILABLE}
+2017-07-02 20:16:20.206  INFO 3784 --- [restartedMain] org.eclipse.jetty.server.Server          : Started @11825ms
+2017-07-02 20:16:57.307  INFO 3784 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fab2837: startup date [Sun Jul 02 20:16:13 CST 2017]; root of context hierarchy
+2017-07-02 20:16:57.435  INFO 3784 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/hello]}" onto public java.lang.String com.wenwu.web.TestController.hello()
+2017-07-02 20:16:57.436  INFO 3784 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.Object com.wenwu.web.UserController.login()
+2017-07-02 20:16:57.440  INFO 3784 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-02 20:16:57.440  INFO 3784 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-02 20:16:57.500  INFO 3784 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:16:57.501  INFO 3784 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:16:57.601  INFO 3784 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:16:57.674  WARN 3784 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-07-02 20:16:58.887  INFO 3784 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-02 20:16:59.058  INFO 3784 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-02 20:16:59.086  INFO 3784 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:16:59.086  INFO 3784 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-02 20:16:59.106  INFO 3784 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2017-07-02 20:16:59.107  INFO 3784 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'messageDispatcherServlet'
+2017-07-02 20:16:59.108  INFO 3784 --- [restartedMain] o.s.w.t.http.MessageDispatcherServlet    : FrameworkServlet 'messageDispatcherServlet': initialization started
+2017-07-02 20:16:59.119  INFO 3784 --- [restartedMain] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2017-07-02 20:16:59.151  INFO 3784 --- [restartedMain] o.s.w.t.http.MessageDispatcherServlet    : FrameworkServlet 'messageDispatcherServlet': initialization completed in 43 ms
+2017-07-02 20:16:59.193  INFO 3784 --- [restartedMain] o.e.jetty.server.AbstractConnector       : Started ServerConnector@4c542552{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:16:59.197  INFO 3784 --- [restartedMain] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2017-07-02 20:16:59.205  INFO 3784 --- [restartedMain] com.wenwu.WenwuApplication               : Started WenwuApplication in 49.31 seconds (JVM running for 50.823)
+2017-07-02 20:17:15.648  INFO 3784 --- [qtp871075252-20] .SysAop$$EnhancerBySpringCGLIB$$d846c9a1 : http://127.0.0.1:8080/user/loginmethodGETqueryStringnull
+2017-07-02 20:17:15.658  INFO 3784 --- [qtp871075252-20] com.wenwu.web.UserController             : user login
+2017-07-02 20:17:15.668  WARN 3784 --- [qtp871075252-20] o.eclipse.jetty.servlet.ServletHandler   : 
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:845)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1712)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:247)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.wenwu.config.SysAop.doAround(SysAop.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:629)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:618)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.wenwu.web.UserController$$EnhancerBySpringCGLIB$$df76a467.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 45 common frames omitted
+
+2017-07-02 20:17:16.454  INFO 3784 --- [qtp871075252-15] .SysAop$$EnhancerBySpringCGLIB$$d846c9a1 : http://127.0.0.1:8080/user/loginmethodGETqueryStringnull
+2017-07-02 20:17:16.455  INFO 3784 --- [qtp871075252-15] com.wenwu.web.UserController             : user login
+2017-07-02 20:17:16.457  WARN 3784 --- [qtp871075252-15] o.eclipse.jetty.servlet.ServletHandler   : 
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:845)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1712)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:247)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.wenwu.config.SysAop.doAround(SysAop.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:629)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:618)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.wenwu.web.UserController$$EnhancerBySpringCGLIB$$df76a467.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 45 common frames omitted
+
+2017-07-02 20:20:08.145  INFO 3784 --- [Thread-18] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fab2837: startup date [Sun Jul 02 20:16:13 CST 2017]; root of context hierarchy
+2017-07-02 20:20:08.154  INFO 3784 --- [Thread-18] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-02 20:20:08.164  INFO 3784 --- [Thread-18] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@4c542552{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:20:08.167  INFO 3784 --- [Thread-18] application                              : Destroying Spring FrameworkServlet 'messageDispatcherServlet'
+2017-07-02 20:20:08.167  INFO 3784 --- [Thread-18] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:20:08.167  INFO 3784 --- [Thread-18] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@182a8afb{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.5178316818981498246.8080/,UNAVAILABLE}
+2017-07-02 20:20:36.282  INFO 3815 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 3815 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:20:36.288  INFO 3815 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:20:36.846  INFO 3815 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fab2837: startup date [Sun Jul 02 20:20:36 CST 2017]; root of context hierarchy
+2017-07-02 20:20:38.865  INFO 3815 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:20:39.715  INFO 3815 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$eb98d617] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:20:39.787  INFO 3815 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2017-07-02 20:20:39.863  INFO 3815 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$47011118] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:20:40.585  INFO 3815 --- [restartedMain] org.eclipse.jetty.util.log               : Logging initialized @6601ms
+2017-07-02 20:20:40.768  INFO 3815 --- [restartedMain] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:20:40.771  INFO 3815 --- [restartedMain] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:20:41.146  INFO 3815 --- [restartedMain] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:20:41.146  INFO 3815 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4307 ms
+2017-07-02 20:20:41.553  INFO 3815 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:20:41.557  INFO 3815 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2017-07-02 20:20:41.558  INFO 3815 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:20:41.558  INFO 3815 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:20:41.559  INFO 3815 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:20:41.559  INFO 3815 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:20:41.559  INFO 3815 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:20:41.886  INFO 3815 --- [restartedMain] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@17ec5d4{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.1491673960543698904.8080/,AVAILABLE}
+2017-07-02 20:20:41.887  INFO 3815 --- [restartedMain] org.eclipse.jetty.server.Server          : Started @7905ms
+2017-07-02 20:21:17.999  INFO 3815 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fab2837: startup date [Sun Jul 02 20:20:36 CST 2017]; root of context hierarchy
+2017-07-02 20:21:18.123  INFO 3815 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/hello]}" onto public java.lang.String com.wenwu.web.TestController.hello()
+2017-07-02 20:21:18.127  INFO 3815 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.Object com.wenwu.web.UserController.login()
+2017-07-02 20:21:18.130  INFO 3815 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-02 20:21:18.131  INFO 3815 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-02 20:21:18.214  INFO 3815 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:21:18.214  INFO 3815 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:21:18.298  INFO 3815 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:21:18.359  WARN 3815 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-07-02 20:21:19.585  INFO 3815 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-02 20:21:19.705  INFO 3815 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-02 20:21:19.735  INFO 3815 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:21:19.735  INFO 3815 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-02 20:21:19.762  INFO 3815 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2017-07-02 20:21:19.763  INFO 3815 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'messageDispatcherServlet'
+2017-07-02 20:21:19.763  INFO 3815 --- [restartedMain] o.s.w.t.http.MessageDispatcherServlet    : FrameworkServlet 'messageDispatcherServlet': initialization started
+2017-07-02 20:21:19.770  INFO 3815 --- [restartedMain] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2017-07-02 20:21:19.787  INFO 3815 --- [restartedMain] o.s.w.t.http.MessageDispatcherServlet    : FrameworkServlet 'messageDispatcherServlet': initialization completed in 24 ms
+2017-07-02 20:21:19.830  INFO 3815 --- [restartedMain] o.e.jetty.server.AbstractConnector       : Started ServerConnector@4c542552{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:21:19.834  INFO 3815 --- [restartedMain] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2017-07-02 20:21:19.844  INFO 3815 --- [restartedMain] com.wenwu.WenwuApplication               : Started WenwuApplication in 44.988 seconds (JVM running for 45.861)
+2017-07-02 20:21:50.379  INFO 3815 --- [Thread-18] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fab2837: startup date [Sun Jul 02 20:20:36 CST 2017]; root of context hierarchy
+2017-07-02 20:21:50.384  INFO 3815 --- [Thread-18] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-02 20:21:50.401  INFO 3815 --- [Thread-18] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@4c542552{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:21:50.404  INFO 3815 --- [Thread-18] application                              : Destroying Spring FrameworkServlet 'messageDispatcherServlet'
+2017-07-02 20:21:50.404  INFO 3815 --- [Thread-18] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:21:50.404  INFO 3815 --- [Thread-18] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@17ec5d4{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.1491673960543698904.8080/,UNAVAILABLE}
+2017-07-02 20:23:21.096  INFO 3834 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 3834 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:23:21.103  INFO 3834 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:23:21.679  INFO 3834 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7188777e: startup date [Sun Jul 02 20:23:21 CST 2017]; root of context hierarchy
+2017-07-02 20:23:23.355  INFO 3834 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:23:24.186  INFO 3834 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$48ba806a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:23:24.260  INFO 3834 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2017-07-02 20:23:24.361  INFO 3834 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a422bb6b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:23:25.122  INFO 3834 --- [restartedMain] org.eclipse.jetty.util.log               : Logging initialized @6074ms
+2017-07-02 20:23:25.309  INFO 3834 --- [restartedMain] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:23:25.311  INFO 3834 --- [restartedMain] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:23:25.569  INFO 3834 --- [restartedMain] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:23:25.569  INFO 3834 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3894 ms
+2017-07-02 20:23:25.974  INFO 3834 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:23:25.977  INFO 3834 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2017-07-02 20:23:25.979  INFO 3834 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:23:25.979  INFO 3834 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:23:25.979  INFO 3834 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:23:25.979  INFO 3834 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:23:25.980  INFO 3834 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:23:26.343  INFO 3834 --- [restartedMain] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@3a7493d{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.6131179739259268001.8080/,AVAILABLE}
+2017-07-02 20:23:26.344  INFO 3834 --- [restartedMain] org.eclipse.jetty.server.Server          : Started @7297ms
+2017-07-02 20:24:00.058  INFO 3845 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 3845 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:24:00.065  INFO 3845 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:24:00.268  INFO 3845 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@59a4602d: startup date [Sun Jul 02 20:24:00 CST 2017]; root of context hierarchy
+2017-07-02 20:24:02.390  INFO 3845 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:24:03.342  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a3d1f66e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:24:04.209  INFO 3845 --- [restartedMain] org.eclipse.jetty.util.log               : Logging initialized @6245ms
+2017-07-02 20:24:04.392  INFO 3845 --- [restartedMain] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:24:04.395  INFO 3845 --- [restartedMain] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:24:04.510  INFO 3845 --- [restartedMain] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:24:04.511  INFO 3845 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4265 ms
+2017-07-02 20:24:04.813  INFO 3845 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:24:04.817  INFO 3845 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:24:04.818  INFO 3845 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:24:04.818  INFO 3845 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:24:04.818  INFO 3845 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:24:04.818  INFO 3845 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:24:05.139  INFO 3845 --- [restartedMain] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@771f3cd2{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.4810216712884805905.8080/,AVAILABLE}
+2017-07-02 20:24:05.140  INFO 3845 --- [restartedMain] org.eclipse.jetty.server.Server          : Started @7179ms
+2017-07-02 20:24:23.092  INFO 3854 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 3854 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:24:23.107  INFO 3854 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:24:23.293  INFO 3854 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21924bee: startup date [Sun Jul 02 20:24:23 CST 2017]; root of context hierarchy
+2017-07-02 20:24:25.582  INFO 3854 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:24:26.293  INFO 3854 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37611e9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:24:27.138  INFO 3854 --- [restartedMain] org.eclipse.jetty.util.log               : Logging initialized @6423ms
+2017-07-02 20:24:27.354  INFO 3854 --- [restartedMain] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:24:27.361  INFO 3854 --- [restartedMain] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:24:27.491  INFO 3854 --- [restartedMain] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:24:27.492  INFO 3854 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4227 ms
+2017-07-02 20:24:27.843  INFO 3854 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:24:27.846  INFO 3854 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:24:27.846  INFO 3854 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:24:27.846  INFO 3854 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:24:27.850  INFO 3854 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:24:27.850  INFO 3854 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:24:28.141  INFO 3854 --- [restartedMain] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@116882aa{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.4402855321286217681.8080/,AVAILABLE}
+2017-07-02 20:24:28.141  INFO 3854 --- [restartedMain] org.eclipse.jetty.server.Server          : Started @7432ms
+2017-07-02 20:25:26.783  INFO 3854 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21924bee: startup date [Sun Jul 02 20:24:23 CST 2017]; root of context hierarchy
+2017-07-02 20:25:26.970  INFO 3854 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/hello]}" onto public java.lang.String com.wenwu.web.TestController.hello()
+2017-07-02 20:25:26.975  INFO 3854 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.Object com.wenwu.web.UserController.login()
+2017-07-02 20:25:26.981  INFO 3854 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-02 20:25:26.982  INFO 3854 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-02 20:25:27.064  INFO 3854 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:25:27.065  INFO 3854 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:25:27.144  INFO 3854 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:25:27.865  INFO 3854 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-02 20:25:27.978  INFO 3854 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-02 20:25:28.004  INFO 3854 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:25:28.005  INFO 3854 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-02 20:25:28.027  INFO 3854 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2017-07-02 20:25:28.079  INFO 3854 --- [restartedMain] o.e.jetty.server.AbstractConnector       : Started ServerConnector@48439683{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:25:28.091  INFO 3854 --- [restartedMain] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2017-07-02 20:25:28.105  INFO 3854 --- [restartedMain] com.wenwu.WenwuApplication               : Started WenwuApplication in 66.318 seconds (JVM running for 67.393)
+2017-07-02 20:26:44.753  INFO 3854 --- [Thread-18] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21924bee: startup date [Sun Jul 02 20:24:23 CST 2017]; root of context hierarchy
+2017-07-02 20:26:44.760  INFO 3854 --- [Thread-18] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-02 20:26:44.781  INFO 3854 --- [Thread-18] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@48439683{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:26:44.785  INFO 3854 --- [Thread-18] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:26:44.786  INFO 3854 --- [Thread-18] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@116882aa{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.4402855321286217681.8080/,UNAVAILABLE}
+2017-07-02 20:26:50.459  INFO 3863 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 3863 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:26:50.466  INFO 3863 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:26:50.697  INFO 3863 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@59a4602d: startup date [Sun Jul 02 20:26:50 CST 2017]; root of context hierarchy
+2017-07-02 20:26:52.772  INFO 3863 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:26:53.450  INFO 3863 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f7b414b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:26:54.287  INFO 3863 --- [restartedMain] org.eclipse.jetty.util.log               : Logging initialized @5879ms
+2017-07-02 20:26:54.475  INFO 3863 --- [restartedMain] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:26:54.477  INFO 3863 --- [restartedMain] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:26:54.626  INFO 3863 --- [restartedMain] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:26:54.626  INFO 3863 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3933 ms
+2017-07-02 20:26:54.924  INFO 3863 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:26:54.928  INFO 3863 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:26:54.929  INFO 3863 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:26:54.930  INFO 3863 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:26:54.930  INFO 3863 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:26:54.930  INFO 3863 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:26:55.183  INFO 3863 --- [restartedMain] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@771f3cd2{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.7397565806244330108.8080/,AVAILABLE}
+2017-07-02 20:26:55.184  INFO 3863 --- [restartedMain] org.eclipse.jetty.server.Server          : Started @6779ms
+2017-07-02 20:28:04.966  INFO 3863 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@59a4602d: startup date [Sun Jul 02 20:26:50 CST 2017]; root of context hierarchy
+2017-07-02 20:28:05.076  INFO 3863 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/hello]}" onto public java.lang.String com.wenwu.web.TestController.hello()
+2017-07-02 20:28:05.077  INFO 3863 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.Object com.wenwu.web.UserController.login()
+2017-07-02 20:28:05.080  INFO 3863 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-02 20:28:05.080  INFO 3863 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-02 20:28:05.136  INFO 3863 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:28:05.136  INFO 3863 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:28:05.203  INFO 3863 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:28:05.748  INFO 3863 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-02 20:28:05.853  INFO 3863 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-02 20:28:05.878  INFO 3863 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:28:05.878  INFO 3863 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-02 20:28:05.894  INFO 3863 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2017-07-02 20:28:05.931  INFO 3863 --- [restartedMain] o.e.jetty.server.AbstractConnector       : Started ServerConnector@104a3bfa{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:28:05.936  INFO 3863 --- [restartedMain] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2017-07-02 20:28:05.944  INFO 3863 --- [restartedMain] com.wenwu.WenwuApplication               : Started WenwuApplication in 76.744 seconds (JVM running for 77.536)
+2017-07-02 20:29:12.533  INFO 3863 --- [Thread-18] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@59a4602d: startup date [Sun Jul 02 20:26:50 CST 2017]; root of context hierarchy
+2017-07-02 20:29:12.539  INFO 3863 --- [Thread-18] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-02 20:29:12.550  INFO 3863 --- [Thread-18] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@104a3bfa{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:29:12.553  INFO 3863 --- [Thread-18] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:29:12.554  INFO 3863 --- [Thread-18] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@771f3cd2{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.7397565806244330108.8080/,UNAVAILABLE}
+2017-07-02 20:29:35.539  INFO 3889 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 3889 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:29:35.546  INFO 3889 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:29:35.701  INFO 3889 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21924bee: startup date [Sun Jul 02 20:29:35 CST 2017]; root of context hierarchy
+2017-07-02 20:29:37.401  INFO 3889 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:29:38.146  INFO 3889 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37611e9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:29:38.859  INFO 3889 --- [restartedMain] org.eclipse.jetty.util.log               : Logging initialized @5344ms
+2017-07-02 20:29:39.038  INFO 3889 --- [restartedMain] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:29:39.040  INFO 3889 --- [restartedMain] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:29:39.241  INFO 3889 --- [restartedMain] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:29:39.241  INFO 3889 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3545 ms
+2017-07-02 20:29:39.560  INFO 3889 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:29:39.563  INFO 3889 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:29:39.563  INFO 3889 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:29:39.563  INFO 3889 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:29:39.564  INFO 3889 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:29:39.569  INFO 3889 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:29:39.901  INFO 3889 --- [restartedMain] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@116882aa{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.5564463913414313081.8080/,AVAILABLE}
+2017-07-02 20:29:39.901  INFO 3889 --- [restartedMain] org.eclipse.jetty.server.Server          : Started @6388ms
+2017-07-02 20:30:41.924  INFO 3889 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21924bee: startup date [Sun Jul 02 20:29:35 CST 2017]; root of context hierarchy
+2017-07-02 20:30:42.022  INFO 3889 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/hello]}" onto public java.lang.String com.wenwu.controller.TestController.hello()
+2017-07-02 20:30:42.024  INFO 3889 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.Object com.wenwu.controller.UserController.login()
+2017-07-02 20:30:42.027  INFO 3889 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-02 20:30:42.027  INFO 3889 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-02 20:30:42.092  INFO 3889 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:30:42.092  INFO 3889 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:30:42.170  INFO 3889 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:30:42.772  INFO 3889 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-02 20:30:42.891  INFO 3889 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-02 20:30:42.918  INFO 3889 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:30:42.919  INFO 3889 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-02 20:30:42.940  INFO 3889 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2017-07-02 20:30:42.979  INFO 3889 --- [restartedMain] o.e.jetty.server.AbstractConnector       : Started ServerConnector@740df304{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:30:42.983  INFO 3889 --- [restartedMain] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2017-07-02 20:30:42.994  INFO 3889 --- [restartedMain] com.wenwu.WenwuApplication               : Started WenwuApplication in 68.773 seconds (JVM running for 69.478)
+2017-07-02 20:32:02.248  INFO 3889 --- [qtp728986214-18] .SysAop$$EnhancerBySpringCGLIB$$c8a6d726 : http://127.0.0.1:8080/user/loginmethodGETqueryStringnull
+2017-07-02 20:32:02.259  INFO 3889 --- [qtp728986214-18] com.wenwu.controller.UserController      : user login
+2017-07-02 20:32:02.269  WARN 3889 --- [qtp728986214-18] o.eclipse.jetty.servlet.ServletHandler   : 
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:845)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1712)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:247)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.wenwu.config.SysAop.doAround(SysAop.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:629)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:618)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.wenwu.controller.UserController$$EnhancerBySpringCGLIB$$8950b14f.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 45 common frames omitted
+
+2017-07-02 20:32:11.295  INFO 3889 --- [qtp728986214-15] .SysAop$$EnhancerBySpringCGLIB$$c8a6d726 : http://127.0.0.1:8080/user/loginmethodGETqueryStringnull
+2017-07-02 20:32:11.296  INFO 3889 --- [qtp728986214-15] com.wenwu.controller.UserController      : user login
+2017-07-02 20:32:11.297  WARN 3889 --- [qtp728986214-15] o.eclipse.jetty.servlet.ServletHandler   : 
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:845)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1712)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:247)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.wenwu.config.SysAop.doAround(SysAop.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:629)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:618)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.wenwu.controller.UserController$$EnhancerBySpringCGLIB$$8950b14f.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 45 common frames omitted
+
+2017-07-02 20:32:16.396  INFO 3889 --- [qtp728986214-20] .SysAop$$EnhancerBySpringCGLIB$$c8a6d726 : http://127.0.0.1:8080/user/loginmethodGETqueryStringnull
+2017-07-02 20:32:16.397  INFO 3889 --- [qtp728986214-20] com.wenwu.controller.UserController      : user login
+2017-07-02 20:32:16.398  WARN 3889 --- [qtp728986214-20] o.eclipse.jetty.servlet.ServletHandler   : 
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:845)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1712)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:247)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.wenwu.config.SysAop.doAround(SysAop.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:629)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:618)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.wenwu.controller.UserController$$EnhancerBySpringCGLIB$$8950b14f.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 45 common frames omitted
+
+2017-07-02 20:39:27.774  INFO 3889 --- [qtp728986214-21] .SysAop$$EnhancerBySpringCGLIB$$c8a6d726 : http://127.0.0.1:8080/user/loginmethodGETqueryStringnull
+2017-07-02 20:39:27.775  INFO 3889 --- [qtp728986214-21] com.wenwu.controller.UserController      : user login
+2017-07-02 20:39:27.777  WARN 3889 --- [qtp728986214-21] o.eclipse.jetty.servlet.ServletHandler   : 
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:845)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1712)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:247)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.wenwu.config.SysAop.doAround(SysAop.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:629)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:618)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.wenwu.controller.UserController$$EnhancerBySpringCGLIB$$8950b14f.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 45 common frames omitted
+
+2017-07-02 20:42:38.120  INFO 3889 --- [Thread-18] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21924bee: startup date [Sun Jul 02 20:29:35 CST 2017]; root of context hierarchy
+2017-07-02 20:42:38.124  INFO 3889 --- [Thread-18] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-02 20:42:38.140  INFO 3889 --- [Thread-18] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@740df304{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:42:38.144  INFO 3889 --- [Thread-18] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:42:38.144  INFO 3889 --- [Thread-18] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@116882aa{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.5564463913414313081.8080/,UNAVAILABLE}
+2017-07-02 20:45:16.082  INFO 4095 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 4095 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:45:16.088  INFO 4095 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:45:16.328  INFO 4095 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21924bee: startup date [Sun Jul 02 20:45:16 CST 2017]; root of context hierarchy
+2017-07-02 20:45:18.985  INFO 4095 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:45:19.741  INFO 4095 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37611e9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:45:20.529  INFO 4095 --- [restartedMain] org.eclipse.jetty.util.log               : Logging initialized @6463ms
+2017-07-02 20:45:20.691  INFO 4095 --- [restartedMain] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:45:20.693  INFO 4095 --- [restartedMain] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:45:20.821  INFO 4095 --- [restartedMain] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:45:20.821  INFO 4095 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4502 ms
+2017-07-02 20:45:21.118  INFO 4095 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:45:21.122  INFO 4095 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:45:21.122  INFO 4095 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:45:21.123  INFO 4095 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:45:21.123  INFO 4095 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:45:21.123  INFO 4095 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:45:21.393  INFO 4095 --- [restartedMain] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@116882aa{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.4330204262995532358.8080/,AVAILABLE}
+2017-07-02 20:45:21.394  INFO 4095 --- [restartedMain] org.eclipse.jetty.server.Server          : Started @7330ms
+2017-07-02 20:46:12.141  INFO 4095 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21924bee: startup date [Sun Jul 02 20:45:16 CST 2017]; root of context hierarchy
+2017-07-02 20:46:12.234  INFO 4095 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/hello]}" onto public java.lang.String com.wenwu.controller.TestController.hello()
+2017-07-02 20:46:12.238  INFO 4095 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.Object com.wenwu.controller.UserController.login()
+2017-07-02 20:46:12.242  INFO 4095 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-02 20:46:12.244  INFO 4095 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-02 20:46:12.299  INFO 4095 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:46:12.299  INFO 4095 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:46:12.358  INFO 4095 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:46:12.879  INFO 4095 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-02 20:46:12.975  INFO 4095 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-02 20:46:12.998  INFO 4095 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:46:12.999  INFO 4095 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-02 20:46:13.026  INFO 4095 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2017-07-02 20:46:13.061  INFO 4095 --- [restartedMain] o.e.jetty.server.AbstractConnector       : Started ServerConnector@33cb9ad7{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:46:13.064  INFO 4095 --- [restartedMain] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2017-07-02 20:46:13.072  INFO 4095 --- [restartedMain] com.wenwu.WenwuApplication               : Started WenwuApplication in 58.244 seconds (JVM running for 59.007)
+2017-07-02 20:46:23.132  INFO 4095 --- [Thread-18] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21924bee: startup date [Sun Jul 02 20:45:16 CST 2017]; root of context hierarchy
+2017-07-02 20:46:23.136  INFO 4095 --- [Thread-18] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-02 20:46:23.151  INFO 4095 --- [Thread-18] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@33cb9ad7{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:46:23.154  INFO 4095 --- [Thread-18] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:46:23.155  INFO 4095 --- [Thread-18] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@116882aa{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.4330204262995532358.8080/,UNAVAILABLE}
+2017-07-02 20:46:39.358  INFO 4101 --- [restartedMain] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 4101 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:46:39.361  INFO 4101 --- [restartedMain] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:46:39.437  INFO 4101 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@557e6f13: startup date [Sun Jul 02 20:46:39 CST 2017]; root of context hierarchy
+2017-07-02 20:46:41.151  INFO 4101 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:46:41.775  INFO 4101 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$90ce847] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:46:42.506  INFO 4101 --- [restartedMain] org.eclipse.jetty.util.log               : Logging initialized @4427ms
+2017-07-02 20:46:42.641  INFO 4101 --- [restartedMain] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:46:42.645  INFO 4101 --- [restartedMain] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:46:42.777  INFO 4101 --- [restartedMain] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:46:42.780  INFO 4101 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3347 ms
+2017-07-02 20:46:43.066  INFO 4101 --- [restartedMain] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:46:43.068  INFO 4101 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:46:43.069  INFO 4101 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:46:43.069  INFO 4101 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:46:43.069  INFO 4101 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:46:43.069  INFO 4101 --- [restartedMain] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:46:43.336  INFO 4101 --- [restartedMain] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@7f944418{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.7292340992685558914.8080/,AVAILABLE}
+2017-07-02 20:46:43.337  INFO 4101 --- [restartedMain] org.eclipse.jetty.server.Server          : Started @5260ms
+2017-07-02 20:47:46.157  INFO 4101 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@557e6f13: startup date [Sun Jul 02 20:46:39 CST 2017]; root of context hierarchy
+2017-07-02 20:47:46.243  INFO 4101 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/hello]}" onto public java.lang.String com.wenwu.controller.TestController.hello()
+2017-07-02 20:47:46.245  INFO 4101 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.Object com.wenwu.controller.UserController.login()
+2017-07-02 20:47:46.247  INFO 4101 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-02 20:47:46.248  INFO 4101 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-02 20:47:46.312  INFO 4101 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:47:46.312  INFO 4101 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:47:46.370  INFO 4101 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:47:47.181  INFO 4101 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-02 20:47:47.287  INFO 4101 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-02 20:47:47.316  INFO 4101 --- [restartedMain] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:47:47.317  INFO 4101 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-02 20:47:47.339  INFO 4101 --- [restartedMain] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2017-07-02 20:47:47.377  INFO 4101 --- [restartedMain] o.e.jetty.server.AbstractConnector       : Started ServerConnector@4c8273dd{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:47:47.381  INFO 4101 --- [restartedMain] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2017-07-02 20:47:47.388  INFO 4101 --- [restartedMain] com.wenwu.WenwuApplication               : Started WenwuApplication in 68.79 seconds (JVM running for 69.31)
+2017-07-02 20:48:26.801  INFO 4101 --- [qtp874823578-20] .SysAop$$EnhancerBySpringCGLIB$$9a52a0d0 : http://127.0.0.1:8080/user/loginmethodGETqueryStringnull
+2017-07-02 20:48:26.813  INFO 4101 --- [qtp874823578-20] com.wenwu.controller.UserController      : user login
+2017-07-02 20:48:26.822  WARN 4101 --- [qtp874823578-20] o.eclipse.jetty.servlet.ServletHandler   : 
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:845)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1712)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:247)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1699)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.wenwu.config.SysAop.doAround(SysAop.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:629)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:618)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.wenwu.controller.UserController$$EnhancerBySpringCGLIB$$3faf1a3.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 45 common frames omitted
+
+2017-07-02 20:54:49.546  INFO 4536 --- [main] com.wenwu.WenwuApplication               : Starting WenwuApplication on lvchuandeMacBook-Pro.local with PID 4536 (/Users/lvchuan/Desktop/wenwuserver/target/classes started by lvchuan in /Users/lvchuan/Desktop/wenwuserver)
+2017-07-02 20:54:49.556  INFO 4536 --- [main] com.wenwu.WenwuApplication               : No active profile set, falling back to default profiles: default
+2017-07-02 20:54:49.766  INFO 4536 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e800aaa: startup date [Sun Jul 02 20:54:49 CST 2017]; root of context hierarchy
+2017-07-02 20:54:51.821  INFO 4536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-07-02 20:54:52.771  INFO 4536 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$32c8a65e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-02 20:54:53.972  INFO 4536 --- [main] org.eclipse.jetty.util.log               : Logging initialized @7621ms
+2017-07-02 20:54:54.121  INFO 4536 --- [main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-07-02 20:54:54.143  INFO 4536 --- [main] org.eclipse.jetty.server.Server          : jetty-9.3.14.v20161028
+2017-07-02 20:54:54.432  INFO 4536 --- [main] application                              : Initializing Spring embedded WebApplicationContext
+2017-07-02 20:54:54.432  INFO 4536 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4713 ms
+2017-07-02 20:54:54.791  INFO 4536 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-02 20:54:54.794  INFO 4536 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-02 20:54:54.795  INFO 4536 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-02 20:54:54.795  INFO 4536 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-02 20:54:54.795  INFO 4536 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-02 20:54:54.796  INFO 4536 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2017-07-02 20:54:55.290  INFO 4536 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@4e0cc334{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.5178014794510100931.8080/,AVAILABLE}
+2017-07-02 20:54:55.291  INFO 4536 --- [main] org.eclipse.jetty.server.Server          : Started @8941ms
+2017-07-02 20:55:31.956  INFO 4536 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e800aaa: startup date [Sun Jul 02 20:54:49 CST 2017]; root of context hierarchy
+2017-07-02 20:55:32.047  INFO 4536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/hello]}" onto public java.lang.String com.wenwu.controller.TestController.hello()
+2017-07-02 20:55:32.048  INFO 4536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.Object com.wenwu.controller.UserController.login()
+2017-07-02 20:55:32.051  INFO 4536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-02 20:55:32.051  INFO 4536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-02 20:55:32.106  INFO 4536 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:55:32.106  INFO 4536 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:55:32.159  INFO 4536 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-02 20:55:32.981  INFO 4536 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-02 20:55:33.013  INFO 4536 --- [main] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 20:55:33.013  INFO 4536 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-02 20:55:33.047  INFO 4536 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2017-07-02 20:55:33.089  INFO 4536 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@2836cc0f{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 20:55:33.093  INFO 4536 --- [main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2017-07-02 20:55:33.100  INFO 4536 --- [main] com.wenwu.WenwuApplication               : Started WenwuApplication in 45.48 seconds (JVM running for 46.749)
+2017-07-02 21:10:56.914  INFO 4536 --- [Thread-12] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e800aaa: startup date [Sun Jul 02 20:54:49 CST 2017]; root of context hierarchy
+2017-07-02 21:10:56.939  INFO 4536 --- [Thread-12] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-02 21:10:56.967  INFO 4536 --- [Thread-12] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@2836cc0f{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-07-02 21:10:56.983  INFO 4536 --- [Thread-12] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2017-07-02 21:10:56.984  INFO 4536 --- [Thread-12] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@4e0cc334{/,file:///private/var/folders/wv/q015x6wj33ng_321pzfv7fyr0000gn/T/jetty-docbase.5178014794510100931.8080/,UNAVAILABLE}

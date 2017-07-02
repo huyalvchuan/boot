@@ -13,7 +13,7 @@ import java.net.URLEncoder;
 import java.util.Map;
 
 //网络请求工具包
-@Component(value = "client")
+@Component(value = "netclient")
 public class NetClient {
 
 
